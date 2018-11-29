@@ -1,0 +1,41 @@
+.modify-padding{
+    margin-bottom: 40px;
+}
+.row .left-login{
+    float: right;
+}
+.left-login{
+    font-size: 20px;
+    margin-top: 18px;
+}
+.pic-center{
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/login.jpg)
+}
+.wen-center{
+    padding-top: 150px;
+    padding-left: 350px;
+}
+.loginBtn{
+    margin-left: 350px;
+}
+.btn-login{
+    margin-top: 35px;
+}
+
+
+
+
+.pic1-center{
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/login.jpg)
+}
+.zi-center{
+    padding-top: 100px;
+    padding-left: 350px;
+}
+.btn_login{
+    margin-left: 370px;
+}

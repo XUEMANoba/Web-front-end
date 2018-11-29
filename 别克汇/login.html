@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/login.css" />
+    <style type="text/css">
+        li{
+            list-style: none;
+        }
+    </style>
+    <script src="js/vue.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.onload=function () {
+            var btn1=document.getElementsByClassName('btn loginBtn');
+
+
+        };
+        function validateusername() {
+                var username=document.getElementById('userName').value;
+                if(username.length==0)
+                {
+                    alert('账号不能为空');
+                    return false;
+                    }
+                var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+                if(!myreg.test(username))
+                {
+                    alert('请输入有效的帐号！！！');
+                    return false;
+                    }else {
+                    return true
+                }
+            }
+        function validatepassword() {
+            var pwd=document.getElementById('password').value;
+            if(validateusername()){
+                if(pwd.length==0){
+                    alert('请输入密码');
+                }else{
+                    alert('ok');
+                    window.location.href="http://localhost:63342/vue%E5%AE%9E%E8%AE%AD--%E5%88%AB%E5%85%8B%E6%B1%87/index.html?_ijt=kp5nt325hg7p0fd1npsu8sjr4k"
+                }
+            }
+        }
+        function hrefRegister() {
+            window.location.href="http://localhost:63342/vue%E5%AE%9E%E8%AE%AD--%E5%88%AB%E5%85%8B%E6%B1%87/register.html?_ijt=kp5nt325hg7p0fd1npsu8sjr4k"
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div>
+            <div class="col-lg-2  modify-padding">
+                <img src="img/logo.png" alt="图标">
+            </div>
+            <p class="left-login">欢迎登录</p>
+        </div>
+
+        <div class="col-lg-6 pic-center">
+            <form action="" method="post" id="login_form">
+                <ul class="wen-center">
+                    <li>
+                        账号:<br/>
+                        <label for="userName"></label> 
+                        <input type="text" id="userName" name="userName" placeholder="user" autocomplete="off"> 
+                        <b></b>
+                        <span style="display: none;">&nbsp;请输入用户名！</span>                                   
+                    </li>
+                    <br/>
+                    <li>
+                        密码:<br/>
+                        <label for="password"></label>
+                        <input type="password" id="password" name="password" placeholder="password" autocomplete="off"> 
+                        <b></b>
+                        <span style="display: none;">&nbsp;密码错误！</span>
+                    </li>
+                </ul>
+            </form>
+            <div class="btn-login">
+                <button class="btn loginBtn" onclick="validatepassword()">登录</button>
+                <button class="btn register" onclick="hrefRegister()">注册</button>
+                <span class="WJMM">
+                    <a href="#"> 忘记密码?</a>
+                </span>
+            </div>
+        </div>
+    </div>    
+</div>
+</body>
+</html>
